@@ -1,4 +1,4 @@
-Syntax Challenge
+Syntx Challenge
 ==================================
 
 Getting Started

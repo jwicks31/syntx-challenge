@@ -1,5 +1,5 @@
 {
-  "name": "syntax-challenge",
+  "name": "syntx-challenge",
   "version": "0.1.0",
   "description": "Starter project for an ES6 RESTful Express API",
   "main": "dist",
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jwicks31/syntax-challenge.git"
+    "url": "git+https://github.com/jwicks31/syntx-challenge.git"
   },
   "author": "Jesse Wicks <jesse.wicks@coderemail.com>",
   "license": "MIT",
@@ -53,6 +53,6 @@
   "homepage": "https://github.com/developit/express-es6-rest-api#readme",
   "keywords": [
     "challenge",
-    "syntax"
+    "syntx"
   ]
 }
