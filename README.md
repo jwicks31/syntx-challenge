@@ -18,6 +18,9 @@ PORT=8080 npm run dev
 # Go Into Front-End
 cd ../front-end
 
+# Install dependencies
+npm install
+
 # start development live-reload server
 npm run dev
 
