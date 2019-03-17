@@ -33,9 +33,9 @@ const ForecastTile = ({ temp, maxTemp, minTemp, condition, date }) => (
   <div className="container">
     <div className="info">
       <div><strong>Date:</strong> {date}</div>
-      <div><strong>Temperature:</strong> &#176;{convert.celsius(temp).toFahrenheit()}</div>
-      <div><strong>Max Temp:</strong> &#176;{convert.celsius(maxTemp).toFahrenheit()}</div>
-      <div><strong>Min Temp:</strong> &#176;{convert.celsius(minTemp).toFahrenheit()}</div>
+      <div><strong>Temperature:</strong> {convert.celsius(temp).toFahrenheit()} &#176;F</div>
+      <div><strong>Max Temp:</strong> {convert.celsius(maxTemp).toFahrenheit()} &#176;F</div>
+      <div><strong>Min Temp:</strong> {convert.celsius(minTemp).toFahrenheit()} &#176;F</div>
       <div><strong>Conditions:</strong> {condition}</div>
     </div>
     {renderImage(condition)}
