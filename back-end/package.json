@@ -8,7 +8,8 @@
     "build": "babel src -s -D -d dist --presets es2015,stage-0",
     "start": "node dist",
     "prestart": "npm run -s build",
-    "test": "eslint src"
+    "lint": "echo 'Linting...' && eslint src && echo 'Lint finished.'",
+    "lint:fix": "echo 'Fixing Lint Errors...' && eslint --fix src && echo 'Finished fixing.'"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
@@ -42,9 +43,12 @@
   "devDependencies": {
     "babel-cli": "^6.9.0",
     "babel-core": "^6.9.0",
+    "babel-eslint": "^10.0.1",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-stage-0": "^6.5.0",
     "eslint": "^3.1.1",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
     "nodemon": "^1.9.2"
   },
   "bugs": {
