@@ -28,7 +28,11 @@ describe('fetchForecasts() Success', async assert => {
   const cityName = 'test';
   const zipCode = 62557;
   const iterator = fetchForecastsSaga(fetchForecasts({ cityName, zipCode }));
-  const forecast = [];
+  const forecast = {
+    forecast: [],
+    city: 'Test',
+    state: 'test'
+  };
   assert({
     given: 'next step',
     should: 'get forecast',
@@ -39,7 +43,7 @@ describe('fetchForecasts() Success', async assert => {
   assert({
     given: 'next step',
     should: 'set forecast',
-    actual: iterator.next({ forecast: forecast }).value,
+    actual: iterator.next(forecast).value,
     expected: put(fetchForecastsSuccess(forecast)),
   });
 });

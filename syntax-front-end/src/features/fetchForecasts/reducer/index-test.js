@@ -13,7 +13,11 @@ import {
 
 const createState = ({
   isLoading = false,
-  forecast = [],
+  forecast = {
+    forecast: [],
+    city: undefined,
+    state: undefined
+  },
   error = {
       status: false,
       message: ''
@@ -54,9 +58,9 @@ describe('Forecasts reducer', async assert => {
     const forecast = [{}, {}, {}];
     assert({
       given: 'a clearForecasts action',
-      should: 'set the forecast to empty array',
+      should: 'set the forecast to default state',
       actual: reducer(createState({ forecast }), clearForecasts()),
-      expected: createState({ forecast: [] }),
+      expected: createState(),
     });
   }
   {
