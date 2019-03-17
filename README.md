@@ -7,7 +7,7 @@ Getting Started
 ```sh
 
 # Go Into Back-End
-cd syntax-back-end
+cd back-end
 
 # Install dependencies
 npm install
@@ -16,7 +16,7 @@ npm install
 PORT=8080 npm run dev
 
 # Go Into Front-End
-cd ../syntax-front-end
+cd ../front-end
 
 # start development live-reload server
 npm run dev
