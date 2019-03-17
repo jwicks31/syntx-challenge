@@ -4,8 +4,9 @@ import fetch from 'node-fetch';
 const toLatLongString = ({ lat, lng }) => `${lat},${lng}`;
 const findCityByZip = async (zipCode) => {
 	try {
-		const response = await fetch(`https://www.zipcodeapi.com/rest/GaufizMLSvdzZfMvgs72U1RWprK4SZKCTKRvVYkqC2gDp1aZsoLA175LS51bQ4mn/info.json/${zipCode}/degrees`);
+		const response = await fetch(`https://www.zipcodeapi.com/rest/OpRNs6BoYgEedkAxP4Jwzkf5LBsbh57oPRFzwyKnHKkb7tDbnharf5armkonKoB1/info.json/${zipCode}/degrees`);
 		const json = await response.json();
+		console.log(json);
 		return toLatLongString(json);
 	} catch (e) {
 		throw new Error(e);
