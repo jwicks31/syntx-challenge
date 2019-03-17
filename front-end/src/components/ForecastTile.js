@@ -1,33 +1,33 @@
-import React from 'react'
-import { string, number } from 'prop-types'
+import React from 'react';
+import { string, number } from 'prop-types';
 import convert from 'converture';
 
 const renderImage = (condition) => {
   switch (condition) {
     case 'Snow':
-      return (<img src='/static/wi-snow.svg' />)
+      return (<img src='/static/wi-snow.svg' />);
     case 'Sleet':
-      return (<img src='/static/wi-sleet.svg' />)
+      return (<img src='/static/wi-sleet.svg' />);
     case 'Hail':
-      return (<img src='/static/wi-hail.svg' />)
+      return (<img src='/static/wi-hail.svg' />);
     case 'Thunderstorm':
-      return (<img src='/static/wi-thunderstorm.svg' />)
+      return (<img src='/static/wi-thunderstorm.svg' />);
     case 'Heavy Rain':
-      return (<img src='/static/wi-rain.svg' />)
+      return (<img src='/static/wi-rain.svg' />);
     case 'Light Rain':
-      return (<img src='/static/wi-sprinkle.svg' />)
+      return (<img src='/static/wi-sprinkle.svg' />);
     case 'Showers':
-      return (<img src='/static/wi-showers.svg' />)
+      return (<img src='/static/wi-showers.svg' />);
     case 'Heavy Cloud':
-      return (<img src='/static/wi-cloudy.svg' />)
+      return (<img src='/static/wi-cloudy.svg' />);
     case 'Light Cloud':
-      return (<img src='/static/wi-cloud.svg' />)
+      return (<img src='/static/wi-cloud.svg' />);
     case 'Clear':
-      return (<img src='/static/wi-day-sunny.svg' />)
+      return (<img src='/static/wi-day-sunny.svg' />);
     default:
-      return (<img src='/static/wi-day-sunny.svg' />)
+      return (<img src='/static/wi-day-sunny.svg' />);
   }
-}
+};
 
 const ForecastTile = ({ temp, maxTemp, minTemp, condition, date }) => (
   <div className="container">
@@ -52,7 +52,7 @@ const ForecastTile = ({ temp, maxTemp, minTemp, condition, date }) => (
       }
     `}</style>
   </div>
-)
+);
 
 ForecastTile.propTypes = {
   temp: number,
@@ -60,6 +60,6 @@ ForecastTile.propTypes = {
   minTemp: number,
   condition: string,
   date: string
-}
+};
 
-export default ForecastTile
+export default ForecastTile;

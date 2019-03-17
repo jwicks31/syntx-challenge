@@ -3,6 +3,8 @@
   "scripts": {
     "dev": "next",
     "test": "NODE_ENV=test babel-node ./src/index-test.js",
+    "lint": "echo 'Linting...' && eslint ./src && echo 'Lint finished.'",
+    "lint:fix": "echo 'Fixing Lint Errors...' && eslint --fix ./src && echo 'Finished fixing.'",
     "build": "next build",
     "start": "next start"
   },
@@ -18,5 +20,13 @@
     "redux": "^4.0.1",
     "redux-saga": "^1.0.2",
     "riteway": "^6.0.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.15.2",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "prettier": "^1.16.4"
   }
 }

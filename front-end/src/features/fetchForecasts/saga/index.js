@@ -22,9 +22,9 @@ export const getForecast = ({
           }
         })
         .then(async res => {
-          const response = await res.json()
+          const response = await res.json();
           if (response.forecast) resolve(response);
-          else reject(response)
+          else reject(response);
         })
         .catch(err => reject(err));
     } else {
@@ -38,9 +38,9 @@ export const getForecast = ({
           }
         })
         .then(async res => {
-          const response = await res.json()
+          const response = await res.json();
           if (response.forecast) resolve(response);
-          else reject(response)
+          else reject(response);
         })
         .catch(err => reject(err));
     }

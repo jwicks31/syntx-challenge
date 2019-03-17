@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Forecast from '../components/Forecast'
+import Forecast from '../components/Forecast';
 import {
   fetchForecasts,
   clearForecasts,
@@ -13,7 +13,7 @@ const mapStateToProps = (appState) => ({
   forecast: getForecast(appState),
   loading: getIsLoading(appState),
   error: getError(appState)
-})
+});
 
 const mapDispatchToProps = {
     fetchForecasts,

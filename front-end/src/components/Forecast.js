@@ -1,42 +1,42 @@
-import React, { useState } from 'react'
-import ForecastTile from './ForecastTile'
-import { object } from 'prop-types'
+import React, { useState } from 'react';
+import ForecastTile from './ForecastTile';
+import { object, bool, func } from 'prop-types';
 
 const Forecast = ({ forecast, fetchForecasts, loading, clearForecasts, error, clearError }) => {
   const [zipCode, setZipCode] = useState('');
   const [cityName, setCityName] = useState('');
-  const handleCityNameChange = (e) => setCityName(e.target.value)
-  const handleZipCodeChange = (e) => setZipCode(e.target.value)
-  
+  const handleCityNameChange = (e) => setCityName(e.target.value);
+  const handleZipCodeChange = (e) => setZipCode(e.target.value);
+
   const handleZipCodeSubmit = (e) => {
-    e.preventDefault()
-    clearForecasts()
-    clearError()
+    e.preventDefault();
+    clearForecasts();
+    clearError();
     fetchForecasts({ zipCode });
-  }
-  
+  };
+
   const handleCityNameSubmit = (e) => {
-    e.preventDefault()
-    clearForecasts()
-    clearError()
+    e.preventDefault();
+    clearForecasts();
+    clearError();
     fetchForecasts({ cityName });
-  }
+  };
   return (
     <div className="container">
     <h1 className="header">Search By City Name or Zip Code</h1>
     <div>
-      <form onSubmit={() => e.preventDefault()}>
+      <form onSubmit={e => e.preventDefault()}>
       <label htmlFor="zipCode">ZipCode: </label>
       <input required type="text" id="zipCode" name="zipCode" onChange={handleZipCodeChange} value={zipCode}/>
       <button  onClick={handleZipCodeSubmit} >Search</button>
     </form>
-    <form onSubmit={() => e.preventDefault()}>
+    <form onSubmit={e => e.preventDefault()}>
       <label htmlFor="cityName">City Name: </label>
       <input required type="text" id="cityName" name="cityName" onChange={handleCityNameChange} value={cityName} />
       <button  onClick={handleCityNameSubmit}>Search</button>
     </form>
     </div>
-    { 
+    {
       forecast.city && forecast.state && (
         <div className="city-info">Closest Match: {forecast.city}, {forecast.state}</div>
       )
@@ -82,11 +82,16 @@ const Forecast = ({ forecast, fetchForecasts, loading, clearForecasts, error, cl
         }
       `}</style>
     </div>
-  )
-}
+  );
+};
 
 Forecast.propTypes = {
   forecast: object,
-}
+  fetchForecasts: func,
+  loading: bool,
+  error: object,
+  clearError: func,
+  clearForecasts: func,
+};
 
-export default Forecast
+export default Forecast;
