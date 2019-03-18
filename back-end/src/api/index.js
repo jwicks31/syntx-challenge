@@ -4,7 +4,7 @@ import weather from './weather';
 
 export default ({ config, db }) => {
 	// eslint-disable-next-line new-cap
-	let api = Router();
+	const api = Router();
 
 	// mount the weather resource
 	api.use('/weather', weather({ config, db }));
