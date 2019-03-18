@@ -1,6 +1,6 @@
 {
-	"port": 8080,
-	"bodyLimit": "100kb",
-	"corsHeaders": ["Link"],
-	"secret": "iloversuperdupersecrets"
+  "port": 8080,
+  "bodyLimit": "100kb",
+  "corsHeaders": ["Link"],
+  "secret": "iloversuperdupersecrets"
 }
