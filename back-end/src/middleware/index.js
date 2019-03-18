@@ -1,6 +1,10 @@
-import { Router } from 'express';
+import {
+	Router
+} from 'express';
 
-export default ({ config }) => {
+export default ({
+	config
+}) => {
 	// eslint-disable-next-line new-cap
 	const routes = Router();
 
@@ -19,6 +23,6 @@ export default ({ config }) => {
 				message: '401 Not Authorized'
 			});
 		}
-  });
+	});
 	return routes;
 };
