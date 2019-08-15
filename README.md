@@ -1,6 +1,3 @@
-Syntx Challenge
-==================================
-
 Getting Started
 ---------------
 
